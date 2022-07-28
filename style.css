@@ -4,18 +4,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
-.main-content, .logo-bar {
-    display: flex;
-    flex-direction: row;
-}
-
 .main-content {
+    display: flex;
+    flex-direction: row wrap;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-
+    min-height: 100vh;
 }
 
 .left-column {
@@ -23,16 +17,13 @@ body {
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
-    width: 45vw;
-    min-width: 45vw;
-    height: 100%;
+    background-attachment: scroll;
+    width: 40vw;
 }
 
-/* .left-column:hover {
-    transform: scale(1.2);
-} */
-
 .logo-bar {
+    display: flex;
+    flex-direction: row;
     position: relative;
     height: 100px;
     background-color: rgba(34, 34, 34, 0.5);
@@ -42,12 +33,16 @@ body {
     gap: 25px;
 }
 
+.logo-bar:hover {
+    scale: 1.1;
+    transition: 0.5s;
+}
 
 .right-column {
     background-color: black;
-    padding-top: 80px;
-    padding-left: 45px;
-    padding-right: 120px;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 60vw;
 } 
 
 .para {
@@ -56,24 +51,129 @@ body {
     flex-flow: column;
     line-height: 200%;
     padding-bottom: 40px;
+    padding-top: 80px;
+    padding-right: 120px;
+    padding-left: 45px;
+
 }
 
 .right-column p, .form-header p {
     color: rgb(236, 236, 236);
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
-    font-weight:bold
+    font-weight: bold;
 }
 
 img {
     height: 4rem;
 }
 
-.left-column p {
+
+
+.name {
     font-family: 'Audiowide', cursive;
-    color: black;
-    font-size: 2.5rem;
-    font-weight: bold;
+    color: white;
+    font-size: 3vw;
+
 }
 
 
+.form-header {
+    background-color: rgb(12, 12, 12);
+    min-width: 60vh;
+    box-shadow: 6px 5px 25px rgba(212, 212, 216, 0.198);
+
+}
+
+
+form {
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 auto;
+    gap: 20px;
+    padding-left: 50px;
+    padding-top:10px;
+    padding-bottom: 40px;
+}
+
+.first-row, 
+.second-row,
+.third-row {
+    display: flex;
+    flex-direction: row nowrap;
+    color: rgb(181, 181, 181);
+    gap: 30px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.first-name, .last-name,
+.email, .phone-number,
+.password, .confirm-password {
+    display: flex;
+    flex-flow: column;
+    gap: 5px;
+}
+
+
+form input[type='text'],
+form input[type='email'],
+form input[type='password'] {
+    background-color: rgb(12, 12, 12);
+    border: 0.2px solid rgb(77,77,77);
+    border-radius: 0.2rem;
+    width: 20vw;
+    min-width: 10px;
+    height: 20px;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px; 
+}
+
+form input[type='text']:focus,
+form input[type='email']:focus,
+form input[type='password']:focus {
+    border: 0.2px solid #e6007e;
+    outline: none;
+}
+
+
+.cta {
+    margin-top: 10px;
+    background-color:black;
+    display: flex;
+    flex-flow: column;
+    padding: 50px;
+    gap: 15px;
+}
+
+
+button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid #e6007e;
+    background-color: black;
+    color: #e6007e;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+button:hover {
+    background-color :#e6007e;
+    color: black;
+    cursor: pointer;
+    scale: 1.1;
+    transition: 0.2s;
+}
+
+span {
+    color:#e6007e;
+    font-weight: bold;
+}
+
+span:hover {
+    cursor: pointer;
+    color: white;
+}
