@@ -7,7 +7,6 @@ body {
 }
 .main-content {
     display: flex;
-    flex-direction: row wrap;
     width: 100vw;
     min-height: 100vh;
 }
@@ -53,18 +52,18 @@ body {
     flex-flow: column wrap;
     width: 60vw;
     z-index: 0;
+    justify-content: center;
 } 
 
 .para {
     display: flex;
     min-width: 40vh;
-    flex-flow: column;
+    flex-flow: column nowrap;
     line-height: 200%;
-    padding-bottom: 40px;
-    padding-top: 80px;
-    padding-right: 120px;
-    padding-left: 45px;
-
+    padding-bottom: 1rem;
+    padding-top: 5rem;
+    padding-right: 2rem;
+    padding-left: 3rem;
 }
 
 .right-column p, .form-header p {
