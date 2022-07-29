@@ -13,12 +13,21 @@ body {
 }
 
 .left-column {
-    background-image: url(./space-g1e38f8dc5_1920.jpg);
+    background-image: url(./photo-1487147264018-f937fba0c817.avif);
     background-position: center;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
     width: 40vw;
+}
+
+.edit {
+    position: fixed;
+    bottom: 10px;
+    left: 150px;
+    font-size: 12px;
+    font-family:'Courier New', Courier, monospace;
+    color: white;
 }
 
 .logo-bar {
@@ -69,8 +78,6 @@ img {
     height: 4rem;
 }
 
-
-
 .name {
     font-family: 'Audiowide', cursive;
     color: white;
@@ -78,23 +85,11 @@ img {
 
 }
 
-
-.form-header {
-    background-color: rgb(12, 12, 12);
-    min-width: 60vh;
-    box-shadow: 6px 5px 25px rgba(212, 212, 216, 0.198);
-
-}
-
-
 form {
     display: flex;
     flex-flow: column;
     flex: 1 1 auto;
     gap: 20px;
-    padding-left: 50px;
-    padding-top:10px;
-    padding-bottom: 40px;
 }
 
 .first-row, 
@@ -115,7 +110,6 @@ form {
     flex-flow: column;
     gap: 5px;
 }
-
 
 form input[type='text'],
 form input[type='email'],
@@ -150,11 +144,14 @@ form input[type='password']:focus {
 
 
 button {
+    position: relative;
+    left: 50px;
+    top: 30px;
     width: 200px;
     height: 50px;
     border-radius: 10px;
     border: 3px solid #e6007e;
-    background-color: black;
+    background-color: transparent;
     color: #e6007e;
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
@@ -169,7 +166,18 @@ button:hover {
     transition: 0.2s;
 }
 
-span {
+.first-part {
+    display: flex;
+    background-color: rgb(12, 12, 12);
+    flex-flow: column wrap;
+    gap: 20px;
+    padding-left: 50px;
+    padding-top:10px;
+    padding-bottom: 40px;
+    box-shadow: 6px 5px 15px rgba(212, 212, 216, 0.198);
+}
+
+a {
     color:#e6007e;
     font-weight: bold;
 }
@@ -178,3 +186,4 @@ span:hover {
     cursor: pointer;
     color: white;
 }
+
