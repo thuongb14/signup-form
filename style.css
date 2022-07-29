@@ -23,9 +23,9 @@ body {
 
 .edit {
     position: fixed;
-    bottom: 10px;
-    left: 150px;
-    font-size: 12px;
+    bottom: 1vh;
+    left: 12.5vw;
+    font-size: 1vh;
     font-family:'Courier New', Courier, monospace;
     color: white;
 }
@@ -50,7 +50,7 @@ body {
 .right-column {
     background-color: black;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     width: 60vw;
     z-index: 0;
 } 
@@ -81,14 +81,12 @@ img {
 .name {
     font-family: 'Audiowide', cursive;
     color: white;
-    font-size: 3vw;
-
+    font-size: 3rem;
 }
 
 form {
     display: flex;
-    flex-flow: column;
-    flex: 1 1 auto;
+    flex-flow: column wrap;
     gap: 20px;
 }
 
